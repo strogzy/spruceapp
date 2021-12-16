@@ -35,17 +35,17 @@ function App() {
     const incomingList = await syncClient.list('incoming');
     const outgoingList = await syncClient.list('outgoing');
 
-    let inT = await incomingList.getItems();
-    let outT = await outgoingList.getItems();
+    let inList = await incomingList.getItems();
+    let outList = await outgoingList.getItems();
 
-    setIncomingList(inT.items);
-    setOutgoingList(outT.items);
+    setIncomingList(inList.items);
+    setOutgoingList(outList.items);
 
     incomingList.on('itemAdded', event => {
       if (!event.isLocal) {
         console.log("item added", event);
 
-        setIncomingList([...inT.items, event.item]);
+        setIncomingList((inT)=> [...inT, event.item]);
       }
     });
 
@@ -59,13 +59,10 @@ function App() {
 
 
   async function getAccessToken() {
-
     const res = await fetch(`http://localhost:3000/token`);
     const data = await res.json();
-    console.log(data.token);
     setToken(data.token);
-    return data.token;
-    
+    return data.token; 
   }
 
   async function getTx(token){
