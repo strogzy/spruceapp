@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.bucket {
+  border: #61dafb;
+  border-width: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.bucket-inT{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.bucket-outT{
+  display: flex;
+  flex-direction: column;
+}
+
+.inT{
+  background-color: aquamarine;
+  color: #282c34;
+  padding: 5px;
+  margin: 1px;
+}
+
+.outT{
+  background-color: salmon;
+  color: #282c34;
+  padding: 5px;
+  margin: 1px;
+}
