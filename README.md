@@ -5,15 +5,19 @@
 
 ### TODO
 
-- add IVR pay
-- add function add transaction
-- fix add/remove items from lists
+- fix Stripe payments visibility in stripe acc
+- Add record name in IVR flow
+- Add custom amount in IVR flow
 - fix css (reverse order)
-- fix css
-- add expense description on the side
 
 --- 
-
+Done:
+- add IVR pay 
+- add function add transaction
+- fix css
+- fix add/remove items from lists
+- add visual feedback on who is being notified
+- add expense/donation description on the side
 
 
 Remarks:
