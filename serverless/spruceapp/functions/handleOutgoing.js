@@ -42,18 +42,17 @@ exports.handler = async (context, event, callback) => {
       points.inIndex = key;
     });
     balance = balanceIn - balanceOut;
-    console.log(
-      "balance",
-      balance,
-      "In",
-      balanceIn,
-      "Out",
-      balanceOut,
-      points,
-      t
-    );
+    // console.log(
+    //   "balance",
+    //   balance,
+    //   "In",
+    //   balanceIn,
+    //   "Out",
+    //   balanceOut,
+    //   points,
+    //   t
+    // );
     if (balance >= t.amount) {
-      console.log("enough money in acc");
       let notifees = [];
       let usedDonations = [];
       let currentInBalanceStart = 0; // balance at which the current donation starts, eg. 5
@@ -67,12 +66,12 @@ exports.handler = async (context, event, callback) => {
         currentInBalanceEnd += parseFloat(item.data.amount);
 
         let notify = false;
-        console.log("checking ", item.index, key,
-          "\ncurrent exp end=",currentInBalanceEnd, 
-          "\ncurrent exp start=",currentOutBalanceStart,
-          "\ncurrent donation end=",currentInBalanceEnd,
-          "\ncurrent donation start=",currentInBalanceStart
-          );
+        // console.log("checking ", item.index, key,
+        //   "\ncurrent exp end=",currentInBalanceEnd, 
+        //   "\ncurrent exp start=",currentOutBalanceStart,
+        //   "\ncurrent donation end=",currentInBalanceEnd,
+        //   "\ncurrent donation start=",currentInBalanceStart
+        //   );
         if (
           (currentOutBalanceEnd <= currentInBalanceEnd &&
             currentOutBalanceEnd > currentInBalanceStart) || // expense ends inside our donation
@@ -85,7 +84,7 @@ exports.handler = async (context, event, callback) => {
         }
 
         if (notify) {
-          console.log("adding ", t);
+          //console.log("adding ", t);
           notifees.push({
             contact: item.data.contact,
             description: t.description,
@@ -95,7 +94,7 @@ exports.handler = async (context, event, callback) => {
           console.log("used this", item.data, item.index);
         }
       });
-      console.log("notifees", notifees);
+      // console.log("notifees", notifees);
       // allow transaction
       //add expense to the board
       await syncClient.lists(syncListName).syncListItems.create({
@@ -108,10 +107,10 @@ exports.handler = async (context, event, callback) => {
 
       //notify donors
       if (SEND_SMS) {
-        console.log("going to send");
+        // console.log("going to send");
 
         let res = await notifyDonors(notifees, client);
-        console.log(res);
+        // console.log(res);
       }
     } else {
       response.setBody({
@@ -119,7 +118,7 @@ exports.handler = async (context, event, callback) => {
       });
     }
   } catch (error) {
-    console.error(error);
+    // console.error(error);
   }
   // console.log(updateError, response);
 
