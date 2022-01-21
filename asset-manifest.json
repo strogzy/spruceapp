@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/spruceapp/static/css/main.b3fc09a1.chunk.css",
-    "main.js": "/spruceapp/static/js/main.0c6f124c.chunk.js",
-    "main.js.map": "/spruceapp/static/js/main.0c6f124c.chunk.js.map",
+    "main.css": "/spruceapp/static/css/main.3d185aa8.chunk.css",
+    "main.js": "/spruceapp/static/js/main.cf64ba89.chunk.js",
+    "main.js.map": "/spruceapp/static/js/main.cf64ba89.chunk.js.map",
     "runtime-main.js": "/spruceapp/static/js/runtime-main.9d12d3f0.js",
     "runtime-main.js.map": "/spruceapp/static/js/runtime-main.9d12d3f0.js.map",
     "static/js/2.4afb3b8b.chunk.js": "/spruceapp/static/js/2.4afb3b8b.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.f827756e.chunk.js": "/spruceapp/static/js/3.f827756e.chunk.js",
     "static/js/3.f827756e.chunk.js.map": "/spruceapp/static/js/3.f827756e.chunk.js.map",
     "index.html": "/spruceapp/index.html",
-    "static/css/main.b3fc09a1.chunk.css.map": "/spruceapp/static/css/main.b3fc09a1.chunk.css.map",
+    "static/css/main.3d185aa8.chunk.css.map": "/spruceapp/static/css/main.3d185aa8.chunk.css.map",
     "static/js/2.4afb3b8b.chunk.js.LICENSE.txt": "/spruceapp/static/js/2.4afb3b8b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9d12d3f0.js",
     "static/js/2.4afb3b8b.chunk.js",
-    "static/css/main.b3fc09a1.chunk.css",
-    "static/js/main.0c6f124c.chunk.js"
+    "static/css/main.3d185aa8.chunk.css",
+    "static/js/main.cf64ba89.chunk.js"
   ]
 }
