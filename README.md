@@ -4,14 +4,16 @@
 
 
 ### TODO
-
-- fix Stripe payments visibility in stripe acc
-- Add record name in IVR flow
-- Add custom amount in IVR flow
+- choose which bucket to donate
 - fix css (reverse order)
+- segment
+
 
 --- 
 Done:
+- Add record name in IVR flow
+- Add custom amount in IVR flow
+- fix Stripe payments visibility in stripe acc
 - add IVR pay 
 - add function add transaction
 - fix css
