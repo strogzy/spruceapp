@@ -1,10 +1,10 @@
 import logo from "./spruceApp-logo.png";
 import { useState, useEffect } from "react";
 import "./App.css";
+import { baseUrl } from "./config";
 
 var {SyncClient} = require("twilio-sync");
 
-const baseUrl = 'http://localhost:3000'
 
 function CurrentDonation(props){
   if (!props.data.amount) {
