@@ -5,6 +5,7 @@ exports.handler = async (context, event, callback) => {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
+    "Content-Type": "application/json"
   };
   response.setHeaders(headers);
 

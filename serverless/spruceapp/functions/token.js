@@ -3,11 +3,10 @@ const SyncGrant = AccessToken.SyncGrant;
 
 exports.handler = (context, event, callback) => {
   const response = new Twilio.Response();
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  };
+  response.appendHeader('Access-Control-Allow-Origin', '*');
+  response.appendHeader('Access-Control-Allow-Methods', 'OPTIONS, POST, GET');
+  response.appendHeader('Access-Control-Allow-Headers', 'Content-Type');
+  response.appendHeader('Content-Type', 'application/json');
 
   // Create a Sync Grant for a particular Sync service, or use the default one
   const syncGrant = new SyncGrant({
@@ -25,12 +24,11 @@ exports.handler = (context, event, callback) => {
   );
 
   token.addGrant(syncGrant);
-  response.setHeaders(headers);
 
   response.setBody({
     token: token.toJwt(),
   });
-  console.log(response);
+  //console.log(response.body);
 
   return callback(null, response);
 };
