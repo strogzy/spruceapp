@@ -16,7 +16,8 @@ function CurrentDonation(props){
   return (
     <div className="currentDetails">
       <p>{props.data.amount}</p>
-      <p>Donated by:{props.data.from}</p>
+      <div>Description:</div>
+      <div>{props.data.from}</div>
     </div>
   )
 }
@@ -155,6 +156,7 @@ function App() {
                 className="inT" 
                 style={{height:`${i.data.amount*3}px`}} 
                 key={i.uri} 
+                tabIndex="0"
                 onClick={()=>showDonation(i)}>
                 {i.data.amount}
                 </div>
@@ -167,6 +169,7 @@ function App() {
                 className="outT" 
                 style={{height:`${i.data.amount*3}px`}} 
                 key={i.uri}
+                tabIndex="0"
                 onClick={()=>showExpense(i)}>
                 {i.data.amount}
               </div>

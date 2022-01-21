@@ -13,7 +13,7 @@ exports.handler = async (context, event, callback) => {
   const syncServiceSid = context.TWILIO_SYNC_SERVICE_SID;
   const syncListName = "outgoing";
   const syncClient = Runtime.getSync({ serviceName: syncServiceSid });
-  const SEND_SMS = false;
+  const SEND_SMS = true;
 
   let updateError = "";
 

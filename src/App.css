@@ -92,6 +92,9 @@
   cursor: pointer;
 }
 
+.inT:focus{background-color:green;}
+.outT:focus{background-color:red;}
+
 .outT{
   background-color: salmon;
   color: #282c34;
