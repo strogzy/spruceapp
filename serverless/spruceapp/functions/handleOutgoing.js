@@ -130,7 +130,7 @@ async function notifyDonors(notifees, twilioClient) {
   const messages = [];
   const response = [];
   notifees.forEach((person) => {
-    let body = person.description;
+    let body = `Expense created: ${person.description}`;
     let to = person.contact;
     let from = "+32460253236";
     messages.push({ body, to, from });
