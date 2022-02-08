@@ -11,6 +11,7 @@ exports.handler = async (context, event, callback) => {
   let client = context.getTwilioClient();
 
   const syncServiceSid = context.TWILIO_SYNC_SERVICE_SID;
+  const msgServiceSid = context.TWILIO_MSG_SERVICE;
   const syncListName = "outgoing";
   const syncClient = Runtime.getSync({ serviceName: syncServiceSid });
   const SEND_SMS = true;
@@ -110,7 +111,7 @@ exports.handler = async (context, event, callback) => {
       if (SEND_SMS) {
         // console.log("going to send");
 
-        let res = await notifyDonors(notifees, client);
+        let res = await notifyDonors(notifees, client, msgServiceSid);
         // console.log(res);
       }
     } else {
@@ -126,13 +127,13 @@ exports.handler = async (context, event, callback) => {
   return callback(updateError || null, response);
 };
 
-async function notifyDonors(notifees, twilioClient) {
+async function notifyDonors(notifees, twilioClient, msgServiceSid) {
   const messages = [];
   const response = [];
   notifees.forEach((person) => {
     let body = `Expense created: ${person.description}`;
     let to = person.contact;
-    let from = "+32460253236";
+    let from = msgServiceSid;
     messages.push({ body, to, from });
   });
 

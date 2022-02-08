@@ -3,4 +3,9 @@
 const baseUrl = 'https://spruceapp-7584-dev.twil.io';
 
 
-export {baseUrl}
+const numbers = [
+  {'USA':'+19284218980'},
+  {'Netherlands':'+3197010252957'}
+]
+
+export {baseUrl, numbers}

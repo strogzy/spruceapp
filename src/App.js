@@ -137,8 +137,14 @@ function App() {
       </div>
       <header className="App-header">
         <h1>Bucket #1: donation counter</h1>
-        <div className="instructions" >
-        1. To make a donation call <b>+32 460 253 236</b> <br/>
+        <div className="instructions" >  
+        1. To make a donation call  
+         {/* <b>+32 460 253 236</b>  */}
+         <select className="selection-box">
+           <option value="+3197010252957"> (Netherlands) +3197010252957</option>
+           <option value="+19284218980"> (USA) +19284218980</option>
+         </select>
+        <br/>
         2. Enter text Credit card number: <b>4242 4242 4242 4242</b><br/> 
         3. Expiry date (MM/YY): <b>12 25</b> (pick a date in the future)<br/>
         4. CVC security code: <b>333</b> <br/> 
